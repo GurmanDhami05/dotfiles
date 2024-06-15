@@ -14,3 +14,5 @@ alias "ls" "lsd"
 #qt5
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
+# terminal
+set -Ux TERMINAL alacritty

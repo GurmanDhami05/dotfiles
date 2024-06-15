@@ -63,8 +63,9 @@ bindsym $mod+d exec "~/.config/rofi/launchers/type-3/launcher.sh"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 
-# brave
-bindsym $mod+b exec brave 
+# browser
+bindsym $mod+b exec firefox 
+
 
 # filemanager
 bindsym $mod+e exec thunar
