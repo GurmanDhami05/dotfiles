@@ -5,18 +5,24 @@ import = [
   # "~/.config/alacritty/catppuccin-macchiato.toml"
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+[env]
+TERM = "xterm-256color"
 
 [font]
 size = 12
+
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Medium"
+style = "Regular"
+
 [font.bold]
 family = "JetBrainsMono Nerd Font"
 style = "Bold"
+
 [font.italic]
 family = "JetBrainsMono Nerd Font"
 style = "Italic"
+
 [font.bold_italic]
 family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
@@ -24,6 +30,7 @@ style = "Bold Italic"
 
 [window]
 opacity = 0.8
+
 [window.padding]
 x = 10
 y = 10
