@@ -15,4 +15,8 @@ alias "ls" "lsd"
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
 # terminal
-set -Ux TERMINAL alacritty
+# set -Ux TERMINAL alacritty
+
+fzf --fish | source
+
+

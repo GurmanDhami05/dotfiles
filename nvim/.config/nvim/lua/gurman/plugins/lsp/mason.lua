@@ -27,7 +27,6 @@ return {
 				"cssls",
 				"pyright",
 				"emmet_ls",
-				"tsserver",
 				"clangd",
 			},
 		})
