@@ -1,9 +1,16 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
+export PGHOST="/var/run/postgresql"
+
+export PATH=$PATH:/usr/local/go/bin
+
+HISTFILE=~/.history
+HISTSIZE=10000
+SAVEHIST=50000
+
+setopt inc_append_history
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 user="$(whoami)"
 # Zinit 
@@ -18,8 +25,7 @@ fi
 source "$ZINIT_HOME/zinit.zsh"
 
 #Prompt
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
+eval "$(starship init zsh)"
 #plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -35,9 +41,6 @@ zinit snippet OMZP::command-not-found
 #load
 autoload -U compinit && compinit
 zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 
@@ -69,6 +72,7 @@ alias fm="ranger"
 alias vim="nvim"
 alias c="clear"
 alias q="quit"
+alias ls="lsd"
 
 
 
@@ -78,5 +82,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 eval $(thefuck --alias)
 
-
-
+# fastfetch
+fastfetch
