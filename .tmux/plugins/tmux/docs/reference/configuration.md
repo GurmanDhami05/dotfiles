@@ -95,7 +95,7 @@ set -ogq @catppuccin_window_current_number_color "#{@thm_mauve}"
 set -ogq @catppuccin_window_current_text " #T"
 set -ogq @catppuccin_window_current_number "#I"
 set -ogq @catppuccin_window_number_position "left"
-set -ogq @catppuccin_window_flags "none" # none, icon, or text
+set -ogq @catppuccin_window_flags "none"
 set -ogq @catppuccin_window_flags_icon_last " 󰖰" # -
 set -ogq @catppuccin_window_flags_icon_current " 󰖯" # *
 set -ogq @catppuccin_window_flags_icon_zoom " 󰁌" # Z
@@ -104,7 +104,7 @@ set -ogq @catppuccin_window_flags_icon_silent " 󰂛" # ~
 set -ogq @catppuccin_window_flags_icon_activity " 󱅫" # #
 set -ogq @catppuccin_window_flags_icon_bell " 󰂞" # !
 # Matches icon order when using `#F` (`#!~[*-]MZ`)
-set -ogq @catppuccin_window_flags_icon_format "##{?window_activity_flag,#{E:@catppuccin_window_flags_icon_activity},}##{?window_bell_flag,#{E:@catppuccin_window_flags_icon_bell},}##{?window_silence_flag,#{E:@catppuccin_window_flags_icon_silent},}##{?window_active,#{E:@catppuccin_window_flags_icon_current},}##{?window_last_flag,#{E:@catppuccin_window_flags_icon_last},}##{?window_marked_flag,#{E:@catppuccin_window_flags_icon_mark},}##{?window_zoomed_flag,#{E:@catppuccin_window_flags_icon_zoom},} "
+set -ogq @catppuccin_window_flags_icon_format "##{?window_activity_flag,#{E:@catppuccin_window_flags_icon_activity},}##{?window_bell_flag,#{E:@catppuccin_window_flags_icon_bell},}##{?window_silence_flag,#{E:@catppuccin_window_flags_icon_silent},}##{?window_active,#{E:@catppuccin_window_flags_icon_current},}##{?window_last_flag,#{E:@catppuccin_window_flags_icon_last},}##{?window_marked_flag,#{E:@catppuccin_window_flags_icon_mark},}##{?window_zoomed_flag,#{E:@catppuccin_window_flags_icon_zoom},}"
 
 # Status line options
 set -ogq @catppuccin_status_left_separator ""
