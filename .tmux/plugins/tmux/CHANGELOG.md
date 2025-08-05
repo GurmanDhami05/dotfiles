@@ -1,45 +1,5 @@
 # Changelog
 
-## [2.1.3](https://github.com/catppuccin/tmux/compare/v2.1.2...v2.1.3) (2025-03-23)
-
-
-### Fixed
-
-* make the space in [@catppuccin](https://github.com/catppuccin)_window_flags_icon_format user-configurable ([#465](https://github.com/catppuccin/tmux/issues/465)) ([320e184](https://github.com/catppuccin/tmux/commit/320e184a31d0825cb4f4af550492cbdff2fc3ffc))
-* pomodoro plugin icon color - use a defined color (peach) rather than orange ([#466](https://github.com/catppuccin/tmux/issues/466)) ([da2143d](https://github.com/catppuccin/tmux/commit/da2143d2a6baf7951eda302678a57a171a78d78a))
-* use plain awk for the load status line module, removing a dep ([#508](https://github.com/catppuccin/tmux/issues/508)) ([c21246e](https://github.com/catppuccin/tmux/commit/c21246ed58e867c9594dc687c5e92b229bc1760d))
-* use the correct option for the left separator for the current window ([#450](https://github.com/catppuccin/tmux/issues/450)) ([ba9bd88](https://github.com/catppuccin/tmux/commit/ba9bd88c98c81f25060f051ed983e40f82fdd3ba))
-
-
-### Documentation
-
-* add a troubleshooting guide ([#473](https://github.com/catppuccin/tmux/issues/473)) ([ab647cf](https://github.com/catppuccin/tmux/commit/ab647cf91501cebbd3f967da2b488a5f87614e6b))
-* Correct the plugin path for TPM in the readme ([#492](https://github.com/catppuccin/tmux/issues/492)) ([ee8970d](https://github.com/catppuccin/tmux/commit/ee8970ddb5dd60fd93e254de9a30ed8277c7ccc7))
-* **README:** fix codeblock indentation ([#489](https://github.com/catppuccin/tmux/issues/489)) ([cce60ab](https://github.com/catppuccin/tmux/commit/cce60abc8efd7a641a5fcc8001e6b3ae61e8d5fe))
-* **README:** update migration guide issue link ([#493](https://github.com/catppuccin/tmux/issues/493)) ([073ee54](https://github.com/catppuccin/tmux/commit/073ee54992c59fedcc29c1525a26f95691f0ae1f))
-
-## [2.1.2](https://github.com/catppuccin/tmux/compare/v2.1.1...v2.1.2) (2024-12-08)
-
-
-### Fixed
-
-* improve uptime status sed script to report correct units for few uptime scenarios ([#437](https://github.com/catppuccin/tmux/issues/437)) ([31fc2bf](https://github.com/catppuccin/tmux/commit/31fc2bfb1123681dc06da613b944b85f81e4babd))
-* use current window separators for the current window format ([#443](https://github.com/catppuccin/tmux/issues/443)) ([2a6c45b](https://github.com/catppuccin/tmux/commit/2a6c45b7c0da1594de1105d6cef15e3e68981113))
-
-## [2.1.1](https://github.com/catppuccin/tmux/compare/v2.1.0...v2.1.1) (2024-11-17)
-
-
-### Fixed
-
-* escape the TPM environment variable in the kube status line module ([#434](https://github.com/catppuccin/tmux/issues/434)) ([eb78ade](https://github.com/catppuccin/tmux/commit/eb78ade9dc1f6cd8ba654572f51ddcae3c6e7fd7))
-* specify the color for right separator of the status modules to be the same as text bg color ([#429](https://github.com/catppuccin/tmux/issues/429)) ([0e66dee](https://github.com/catppuccin/tmux/commit/0e66dee11ee396824668d4db863f1873e9e9243f))
-
-
-### Documentation
-
-* add possible values for window_flags ([#417](https://github.com/catppuccin/tmux/issues/417)) ([c8a2d1a](https://github.com/catppuccin/tmux/commit/c8a2d1ae9649aa904960bef1516ea2ff9a3e6ad0))
-* **custom-status:** fix typo `catpuccin` -&gt; `catppuccin` ([#424](https://github.com/catppuccin/tmux/issues/424)) ([aaf9120](https://github.com/catppuccin/tmux/commit/aaf9120f769a34e5491b3ee7f885c8c347f2f663))
-
 ## [2.1.0](https://github.com/catppuccin/tmux/compare/v2.0.0...v2.1.0) (2024-10-25)
 
 
