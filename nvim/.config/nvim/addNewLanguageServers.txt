@@ -1,0 +1,29 @@
+Just three places to update. For example adding Python:
+1. lsp.lua — add the server:
+lua local servers = {
+  lua_ls = { ... },
+  pyright = {},  -- add this
+}
+2. lsp.lua — add any extra tools:
+lualocal extra_tools = {
+  'stylua',
+  'black',    -- python formatter
+  'isort',    -- python import sorter
+  'pylint',   -- python linter
+}
+3. treesitter.lua — add the parser:
+lualocal parsers = {
+  'bash', 'c', 'lua', ...
+  'python',  -- add this
+}
+4. formatting.lua — add the formatter:
+luaformatters_by_ft = {
+  lua = { 'stylua' },
+  python = { 'isort', 'black' },  -- add this
+}
+5. lint.lua — add the linter:
+lualint.linters_by_ft = {
+  markdown = { 'markdownlint' },
+  python = { 'pylint' },  -- add this
+}
+Then restart nvim and Mason will auto install everything. That's the full workflow for any language. Sonnet 4.6
