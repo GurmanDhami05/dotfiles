@@ -81,6 +81,7 @@ return {
         end,
         settings = { Lua = {} },
       },
+      pyright = {},
       -- ADD MORE SERVERS HERE
       -- pyright = {},
       -- clangd = {},
@@ -92,10 +93,12 @@ return {
     -- ADD EXTRA TOOLS HERE (formatters, linters)
     local extra_tools = {
       'stylua',
-      -- 'prettierd',
-      -- 'black',
-      -- 'isort',
-      -- 'eslint_d',
+      'prettierd',
+      'black',
+      'pyright',
+      'isort',
+      'eslint_d',
+      'pylint',
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
