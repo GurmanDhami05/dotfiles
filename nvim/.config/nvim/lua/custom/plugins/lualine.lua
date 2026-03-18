@@ -19,6 +19,25 @@ return {
         { 'filename', path = 1, symbols = { modified = '\u{f044}  ', readonly = '\u{f023}  ' } },
       },
       lualine_x = {
+        {
+          function()
+            local ok, copilot = pcall(require, 'copilot.api')
+            if not ok then return '' end
+            local status = copilot.status.data.status
+            local icons = {
+              Normal = ' ',
+              InProgress = ' ',
+              Warning = ' ',
+            }
+            return icons[status] or ' '
+          end,
+          color = { fg = '#6CC644' },
+        },
+        {
+          require('lazy.status').updates,
+          cond = require('lazy.status').has_updates,
+          color = { fg = '#ff9e64' },
+        },
         { 'encoding' },
         { 'fileformat' },
         { 'filetype', icon_only = false },
