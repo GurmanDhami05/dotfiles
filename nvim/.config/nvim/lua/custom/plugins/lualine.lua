@@ -9,8 +9,14 @@ return {
       section_separators = { left = '\u{e0b0}', right = '\u{e0b2}' },
     },
     sections = {
-      lualine_a = { 'mode' },
+      lualine_a = {
+        'mode',
+      },
       lualine_b = {
+        {
+          function() return vim.fn.reg_recording() ~= '' and ' Recording @' .. vim.fn.reg_recording() or '' end,
+          color = { fg = '#ff9e64', bg = 'NONE' },
+        },
         { 'branch', icon = '\u{e0a0}' },
         { 'diff', symbols = { added = '\u{f0fe} ', modified = '\u{f459} ', removed = '\u{f0fb} ' } },
         { 'diagnostics', symbols = { error = '\u{f659} ', warn = '\u{f529} ', info = '\u{f129} ', hint = '\u{f835} ' } },

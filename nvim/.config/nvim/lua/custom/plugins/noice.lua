@@ -14,12 +14,6 @@ return {
     },
   },
   opts = {
-    routes = {
-      {
-        filter = { event = 'msg_show', kind = '', find = 'recording' },
-        opts = { skip = true },
-      },
-    },
     lsp = {
       override = {
         ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
