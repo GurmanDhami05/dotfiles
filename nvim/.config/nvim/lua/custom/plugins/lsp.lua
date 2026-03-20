@@ -82,6 +82,11 @@ return {
         settings = { Lua = {} },
       },
       pyright = {},
+      ts_ls = {},
+      html = {},
+      cssls = {},
+      emmet_ls = {},
+      jsonls = {},
       -- ADD MORE SERVERS HERE
       -- pyright = {},
       -- clangd = {},
@@ -99,6 +104,11 @@ return {
       'isort',
       'eslint_d',
       'pylint',
+      'typescript-language-server',
+      'html-lsp',
+      'css-lsp',
+      'emmet-ls',
+      'json-lsp',
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})

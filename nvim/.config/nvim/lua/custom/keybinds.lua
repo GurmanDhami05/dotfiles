@@ -7,7 +7,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 -- exit insert mode with jj
-vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit Insert Mode' })
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = false, desc = 'Exit Insert Mode' })
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
