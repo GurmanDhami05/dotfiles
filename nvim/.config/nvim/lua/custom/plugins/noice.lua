@@ -14,6 +14,10 @@ return {
     },
   },
   opts = {
+    cmdline = { enabled = true },
+    messages = { enabled = false },
+    popupmenu = { enabled = true },
+    notify = { enabled = true },
     lsp = {
       override = {
         ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
@@ -26,9 +30,6 @@ return {
       command_palette = true,
       long_message_to_split = true,
       inc_rename = true,
-    },
-    notify = {
-      enabled = true,
     },
   },
   keys = {

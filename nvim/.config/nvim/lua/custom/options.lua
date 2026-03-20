@@ -77,3 +77,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_create_autocmd({ 'RecordingEnter', 'RecordingLeave' }, {
   callback = function() require('lualine').refresh() end,
 })
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    local lines = #vim.v.event.regcontents
+    vim.schedule(
+      function()
+        vim.notify(lines .. ' line' .. (lines > 1 and 's' or '') .. ' yanked', vim.log.levels.INFO, {
+          title = 'Yank',
+          timeout = 2000,
+        })
+      end
+    )
+  end,
+})
