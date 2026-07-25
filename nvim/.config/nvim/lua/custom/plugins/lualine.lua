@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
-      theme = 'catppuccin-mocha',
+      theme = 'tokyonight',
       globalstatus = true,
       component_separators = { left = '\u{e0b1}', right = '\u{e0b3}' },
       section_separators = { left = '\u{e0b0}', right = '\u{e0b2}' },

@@ -1,10 +1,37 @@
 return {
   {
     'folke/tokyonight.nvim',
-    enabled = false, -- disable tokyonight
+    -- enabled = false, -- disable tokyonight
+    name = 'tokyonight',
+    priority = 1000,
+    config = function()
+      require('tokyonight').setup {
+        style = 'night',
+        transparent = true,
+        styles = {
+          comments = { italic = true },
+          keywords = { italic = true },
+          functions = {},
+          variables = {},
+        },
+        integrations = {
+          telescope = true,
+          bufferline = true,
+          neotree = true,
+          which_key = true,
+          mini = true,
+          gitsigns = true,
+          treesitter = true,
+          blink_cmp = true,
+          indent_blankline = { enabled = true },
+        },
+      }
+      vim.cmd.colorscheme 'tokyonight'
+    end,
   },
   {
     'catppuccin/nvim',
+    enabled = false,
     name = 'catppuccin',
     priority = 1000,
     config = function()

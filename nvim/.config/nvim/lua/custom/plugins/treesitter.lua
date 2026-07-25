@@ -27,6 +27,7 @@ return {
       'yaml',
       'rust',
       'go',
+      'cmake',
     }
     require('nvim-treesitter').install(parsers)
 

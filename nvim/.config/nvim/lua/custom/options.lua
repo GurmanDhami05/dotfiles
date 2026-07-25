@@ -91,3 +91,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     )
   end,
 })
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.env.PATH = vim.env.PATH .. ':/home/dhami/.local/bin'

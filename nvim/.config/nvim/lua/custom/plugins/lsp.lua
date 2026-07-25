@@ -87,6 +87,12 @@ return {
       cssls = {},
       emmet_ls = {},
       jsonls = {},
+      clangd = {
+        root_markers = { 'compile_commands.json', 'compile_flags.txt', '.git' },
+      },
+      cmake = {
+        cmd = { 'cmake-language-server' },
+      },
       -- ADD MORE SERVERS HERE
       -- pyright = {},
       -- clangd = {},
@@ -109,9 +115,12 @@ return {
       'css-lsp',
       'emmet-ls',
       'json-lsp',
+      'clangd',
+      'clang-format',
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
+    ensure_installed = vim.tbl_filter(function(name) return name ~= 'cmake' end, ensure_installed)
     vim.list_extend(ensure_installed, extra_tools)
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

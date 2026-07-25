@@ -11,9 +11,9 @@ return {
     },
   },
   opts = {
-    notify_on_error = true, -- changed to true so you know when formatting fails
+    notify_on_error = true,
     format_on_save = function(bufnr)
-      local disable_filetypes = { c = true, cpp = true }
+      local disable_filetypes = {}
       if disable_filetypes[vim.bo[bufnr].filetype] then
         return nil
       else
@@ -23,16 +23,22 @@ return {
         }
       end
     end,
-    -- ADD YOUR FORMATTERS HERE
+    formatters = {
+      ['clang-format'] = {
+        command = vim.fn.exepath 'clang-format',
+      },
+    },
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'isort', 'black' },
-      javascript = { 'prettierd', 'prettier', stop_after_first = true },
-      typescript = { 'prettierd', 'prettier', stop_after_first = true },
+      javascript = { 'prettierd' },
+      typescript = { 'prettierd' },
       html = { 'prettierd' },
       css = { 'prettierd' },
       json = { 'prettierd' },
       markdown = { 'prettierd' },
+      c = { 'clang-format' },
+      cpp = { 'clang-format' },
     },
   },
 }

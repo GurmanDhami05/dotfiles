@@ -19,6 +19,10 @@ local function set_transparent()
     highlight MiniNotifyNormal guibg=NONE ctermbg=NONE
     highlight MiniNotifyTitle guibg=NONE ctermbg=NONE
     highlight NotifyBackground guibg=NONE ctermbg=NONE
+    highlight NeoTreeNormal guibg=NONE ctermbg=NONE
+    highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
+    highlight NeoTreeEndOfBuffer guibg=NONE ctermbg=NONE
+    highlight NeoTreeWinSeparator guibg=NONE ctermbg=NONE
   ]]
 end
 
