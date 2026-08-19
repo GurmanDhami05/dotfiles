@@ -1,1 +1,5 @@
 fish/.config/fish/fish_variables
+
+custom
+!custom/README.md
+!custom/example.sh
